@@ -1,0 +1,30 @@
+\doxysection{Load\+Balancer.\+h}
+\hypertarget{_load_balancer_8h_source}{}\label{_load_balancer_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ LOADBALANCER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ LOADBALANCER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <queue>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}RequestStruct.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Server.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_load_balancer}{LoadBalancer}}\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ vector<int>\ log;}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ vector<Server>\ webservers;}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ queue<RequestStruct>\ requestQ;}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ cycles;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_load_balancer}{LoadBalancer}}(\textcolor{keywordtype}{int}\ serverCount,\ \textcolor{keywordtype}{int}\ cycles);}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ newRequest(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_request_struct}{RequestStruct}}\&\ requestStruct);}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ process();}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ addRandomRequest(\textcolor{keywordtype}{int}\ requestCount);}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ printLog();}
+\DoxyCodeLine{00023\ \};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
